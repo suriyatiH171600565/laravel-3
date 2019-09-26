@@ -81,9 +81,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    LARAVEL
-                
-                    suriyati
+                  SURIYATI
                 </div>
 
                 <div class="links">
