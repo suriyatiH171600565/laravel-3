@@ -38,6 +38,24 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        @auth
+<li class="nav-item dropdown">
+
+<a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre> PILIHAN <span class="caret"></span>
+</a>
+
+<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+    <a class="nav-link" href="{{ route('Kategori_Artikel.index') }}">{{ __('Kategori Artikel') }}</a>
+    <a class="nav-link" href="{{ route('Kategori_Berita.index') }}">{{ __('Kategori Berita') }}</a>
+    <a class="nav-link" href="{{ route('Kategori_Galeri.index') }}">{{ __('Kategori Galeri') }}</a>
+    <a class="nav-link" href="{{ route('Kategori_Pengumuman.index') }}">{{ __('Kategori Pengumuman') }}</a>
+    <a class="nav-link" href="{{ route('artikel.index') }}">{{ __('Artikel') }}</a>
+    <a class="nav-link" href="{{ route('berita.index') }}">{{ __('Berita') }}</a>
+    <a class="nav-link" href="{{ route('galeri.index') }}">{{ __('Galeri') }}</a>
+    <a class="nav-link" href="{{ route('pengumuman.index') }}">{{ __('Pengumuman') }}</a>
+</div>
+</li>
+@endauth
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -76,5 +94,10 @@
             @yield('content')
         </main>
     </div>
+    <script
+              src="https://code.jquery.com/jquery-3.4.1.min.js"
+              integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+              crossorigin="anonymous"></script>
+            @yield('scripts')
 </body>
 </html>

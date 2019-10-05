@@ -4,10 +4,9 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class kategori_pengumuman extends Model
+class Kategori_Pengumuman extends Model
 {
-    //
-     protected $table="kategori_pengumuman";
+   protected $table="Kategori_Pengumuman";
 
-    protected $fillabel=['user_id','nama'];
+   protected $fillable=['id','nama','users_id'];
 }

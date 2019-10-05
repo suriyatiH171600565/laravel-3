@@ -6,8 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class pengumuman extends Model
 {
-    //
     protected $table="pengumuman";
 
-    protected $fillabel=['user_id','nama'];
+   protected $fillable=['id','judul', 'isi' ,'users_id','kategori_pengumuman_id',];
 }
