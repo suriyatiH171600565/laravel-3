@@ -27,4 +27,33 @@ class ArtikelController extends Controller
       return redirect(route('artikel.index'));
 
    }
+    public function edit($id){
+     $artikel=artikel::find($id);
+      if (empty($Artikel)){
+        return redirect(route('Artikel.index'));
+      }
+      return view('Artikel.edit', compact('Artikel'));
+  }
+  public function update($id,Request $request){
+    $artikel=artikel::find($id);
+    $input= $request->all();
+
+    if (empty($Artikel)){
+      return redirect(route('Artikel.index'));
+    }
+    $Artikel->update($input);
+    return redirect(route('Artikel.index'));
+
+  }
+
+   public function destroy($id){
+     $artikel=artikel::find($id);
+
+
+    if (empty($Artikel)){
+      return redirect(route('Artikel.index'));
+    }
+    $Artikel->delete();
+    return redirect(route('Artikel.index'));
+   }
 }

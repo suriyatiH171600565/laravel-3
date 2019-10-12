@@ -7,8 +7,10 @@
               <div class=card>
                <div class="card-header">"Tambah Artikel"</div>
                <div class="card-body">
-               	<form method="post" action="{!! route('artikel.store') !!}">
-               		@include('artikel.form')
+               	{!! Form::model($artikel,['route'=>['artikel.update',$artikel->id],'method'=>'patch']) !!}
+                @include('artikel.form')
+                {!! Form::close() !!}
+               		
                 </form>
                		
                </div>
@@ -17,12 +19,4 @@
     </div>
  </div>
                
-@endsection
-@section('scripts')
-<script src="https://cdn.ckeditor.com/4.13.0/full/ckeditor.js"></script>
-<script>
-$(document).ready(function(){
-    CKEDITOR.replace('isi');
-});
-</script>
 @endsection
